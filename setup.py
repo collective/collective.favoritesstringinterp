@@ -11,7 +11,11 @@ setup(name='collective.favoritesstringinterp',
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
+          "Environment :: Web Environment",
           "Framework :: Plone",
+          "Framework :: Zope2",
+          "License :: OSI Approved :: GNU General Public License (GPL)",
+          "Operating System :: OS Independent",
           "Programming Language :: Python",
           ],
       keywords='favorites e-mail string interpretation',
