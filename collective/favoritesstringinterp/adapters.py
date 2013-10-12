@@ -12,16 +12,18 @@ from zope.site.hooks import getSite
 from Products.CMFCore.interfaces import IContentish
 from Products.CMFCore.utils import getToolByName
 
-from plone.stringinterp import _
 from plone.stringinterp.adapters import BaseSubstitution
 from collective.favorites.interfaces import IFavoriteStorage
+
+from zope.i18nmessageid import MessageFactory
+_ = MessageFactory('plone')
 
 
 class FavoritesUserEmailsSubstitution(BaseSubstitution):
     adapts(IContentish)
 
-    category = _(u'Favorites')
-    description = _(u'List emails separated by coma for users who favorites current content')
+    category = _('favorites_stringinterp_category', u'Favorites')
+    description = _('favorites_stringinterp_description', u'List emails separated by coma for users who favorites current content')
 
     def safe_call(self):
         users = []
